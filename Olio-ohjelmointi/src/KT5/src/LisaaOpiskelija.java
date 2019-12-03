@@ -109,7 +109,8 @@ public void tallenna() {
 			System.out.println("Yhteys tietokantaan on luotu.");
 			
 			// P‰ivitysoperaatio t‰ytyy tehd‰ executeUpdate -metodilla. 
-			// K‰ytet‰‰n siisteyden vuoksi SQL lausetta joka on m‰‰ritelty muuttujaan		
+			// K‰ytet‰‰n siisteyden vuoksi SQL lausetta joka on m‰‰ritelty muuttujaan	
+			// Kerrotaan mihin muuttujiin halutaan laittaa tietoa
 			String sql = "INSERT INTO OPISKELIJATIEDOT (etunimi, sukunimi, opiskelijanumero)" + " VALUES ( ?, ?, ?)";
 			//int tuloksia = stmt.executeUpdate(SQL_lause);
 			PreparedStatement preparedStmt = con.prepareStatement(sql);
@@ -125,8 +126,6 @@ public void tallenna() {
 			
 			System.out.println("Tiedot Lis‰tty");
 
-			// Tulostetaan muuttuneiden rivien m‰‰r‰			
-			//System.out.println("P‰ivitys vaikutti "+tuloksia+ " riviin.");
 			 super.dispose();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

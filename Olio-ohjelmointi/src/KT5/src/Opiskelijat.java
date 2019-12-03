@@ -168,7 +168,7 @@ public class Opiskelijat extends JFrame {
 			// Tulosjoukko on taulukko-tyyppinen rakenne, joka
 			// voidaan käydä läpi esim. while silmukalla
 			
-			
+			// Tulostaa jokaisen rivin, jolla on tietoa
 			while (rs.next()){
 				id = Integer.toString(rs.getInt(1));
 				etunimi = rs.getString(2);
@@ -176,13 +176,9 @@ public class Opiskelijat extends JFrame {
 				numero = rs.getString(4);
 				
 				model.addRow(new Object[] {id, etunimi, sukunimi, numero} );
-				// System.out.println(rs.getString(2) + "  " + rs.getString(3) + "  " + rs.getString(4));
 			}
-			// Tulostetaan myös palautuneiden rivien määrä (hieman hankalasti) 
-			// hyppäämällä viimeiselle tulosriville ja tulostamalla sen indeks
 			rs.last();
 			System.out.println("Tuloksia palautui: "+rs.getRow()+" riviä.");
-			// Tässä kohtaa voitaisiin alkaa luomaan kyselyitä
 					
 			// Suljetaan yhteys
 			con.close();

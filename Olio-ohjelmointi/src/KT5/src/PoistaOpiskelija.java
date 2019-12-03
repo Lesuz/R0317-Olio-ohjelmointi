@@ -69,26 +69,8 @@ public class PoistaOpiskelija extends JFrame {
 			// T‰ydennet‰‰n SQL-lauseisiin puuttuvat muuttujat
 			preparedStmt.setInt(1, id);
 
-			// Suoritetaan SQL lause
-
 			preparedStmt.execute();
-			
-			// Luodaan uusi kysely
-			// Statement stmt = con.createStatement();
-			// Suoritetaan kysely ja otetaan tulokset talteen
-			//ResultSet rs = stmt.executeQuery("SELECT * FROM OPISKELIJATIEDOT");
-						
-			// Tulosjoukko on taulukko-tyyppinen rakenne, joka
-			// voidaan k‰yd‰ l‰pi esim. while silmukalla
-						
-			//while (rs.next()){
-			//	System.out.println(rs.getString(1) + "  " + rs.getString(2) + "  " + rs.getInt(3));
-			//}
-			// Tulostetaan myˆs palautuneiden rivien m‰‰r‰ (hieman hankalasti) 
-			// hypp‰‰m‰ll‰ viimeiselle tulosriville ja tulostamalla sen indeksi
-			//rs.last();
-			//System.out.println("Tuloksia palautui: "+rs.getRow()+" rivi‰.");
-			// T‰ss‰ kohtaa voitaisiin alkaa luomaan kyselyit‰
+		
 			System.out.println("Tiedot poistettu");
 			// Suljetaan yhteys
 			con.close();
